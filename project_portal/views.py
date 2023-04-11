@@ -6,7 +6,7 @@ from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 
 def index(request):
-    return render(request, 'base.html')
+    return render(request,  'base.html')
 
 def project_submission(request):
     if request.method == 'POST':
