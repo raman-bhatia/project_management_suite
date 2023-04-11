@@ -1,0 +1,18 @@
+<!-- base.html -->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  </head>
+  <body>
+    {% block content %}
+    {% endblock %}
+
+    <!-- Add the following script tag to load the main.js file -->
+    <script src="{% static 'build/main.js' %}"></script>
+  </body>
+</html>
+

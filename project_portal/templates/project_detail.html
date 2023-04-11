@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ project.title }}</h1>
+  <p>Submitted by: {{ project.submitted_by }}</p>
+  <p>Disease Area: {{ project.disease_area }}</p>
+  <p>Study Type: {{ project.study_type }}</p>
+  <p>Capabilities Needed: {{ project.capabilities_needed }}</p>
+  <p>Start Date: {{ project.start_date }}</p>
+  <p>End Date: {{ project.end_date }}</p>
+  <p>Details:</p>
+  <p>{{ project.details }}</p>
+{% endblock %}
