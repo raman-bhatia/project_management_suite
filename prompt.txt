@@ -1,0 +1,9 @@
+Help me to create a project portal app called project_portal for the data science team using Django. 
+This app should have following functionalities: 
+1. It should have a page to submit a project with following fields 
+title, details, start date, end date, capabilities needed, disease area, study type, submitted by 
+2. It should have a search page that can search the above projects using keywords from all field of project model. 
+3. It should have a homepage that shows all projects and its status based on the start date and end date.
+4. Include the base.html file 
+5. provide a funcationality on the home page to select active projects only 
+6. Create a react app for above pages and beautify the app using bootstrap themes 

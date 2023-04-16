@@ -4,9 +4,7 @@ from django.db.models import Q, F
 from .forms import ProjectForm
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-
-def index(request):
-    return render(request,  'base.html')
+from .utils import get_current_date
 
 def project_submission(request):
     if request.method == 'POST':
@@ -20,7 +18,7 @@ def project_submission(request):
 
 def project_list(request):
     projects = Project.objects.all()
-    return render(request, 'project_list.html', {'projects': projects})
+    return render(request, 'project_list.html', {'projects': projects, 'today_date': get_current_date()})
 
 def home_view(request):
     projects = Project.objects.all()
@@ -57,3 +55,4 @@ def project_detail_view(request, project_id):
     project = get_object_or_404(Project, id=project_id)
     context = {'project': project}
     return render(request, 'project_detail.html', context)
+
